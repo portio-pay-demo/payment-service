@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_DB: portioapay_payments_test
+          POSTGRES_USER: payments
+          POSTGRES_PASSWORD: test
+        ports:
+          - 5432:5432
+      redis:
+        image: redis:7
+        ports:
+          - 6379:6379
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Run tests
+        run: ./mvnw test
+        env:
+          DB_URL: jdbc:postgresql://localhost:5432/portioapay_payments_test
+          DB_USER: payments
+          DB_PASSWORD: test
+
+      - name: Build JAR
+        run: ./mvnw package -DskipTests
+
+  security-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run OWASP dependency check
+        run: ./mvnw org.owasp:dependency-check-maven:check

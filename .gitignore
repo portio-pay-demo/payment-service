@@ -1,0 +1,11 @@
+target/
+*.class
+*.jar
+*.war
+.mvn/
+!.mvn/wrapper/
+.idea/
+*.iml
+.DS_Store
+application-local.yml
+application-secrets.yml
