@@ -46,3 +46,5 @@ resilience4j:
         waitDuration: 500ms
         enableExponentialBackoff: true
         exponentialBackoffMultiplier: 2
+
+# NP-7 fix: pool size increased, idempotency cache added
