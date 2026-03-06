@@ -66,3 +66,5 @@ public class AuditLogService {
         log.error("AUDIT_FALLBACK: {}", entry);
     }
 }
+
+// NP-5: PCI DSS 4.0 audit logging — all events shipped to audit.payment.events
