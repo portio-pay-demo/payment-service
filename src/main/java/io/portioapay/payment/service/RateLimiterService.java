@@ -45,3 +45,5 @@ public class RateLimiterService {
         return true;
     }
 }
+
+// NP-4 fix: token bucket with enterprise burst allowance
