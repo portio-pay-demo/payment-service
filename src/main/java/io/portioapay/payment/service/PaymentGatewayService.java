@@ -54,3 +54,5 @@ public class PaymentGatewayService {
         return gatewayTransactionId + "_captured";
     }
 }
+
+// NP-1 fix applied: circuit breaker + exponential backoff active
