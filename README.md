@@ -1,6 +1,8 @@
-# payment-service
+# PortIOPay Payment Service
 
 Core payment processing service for PortIOPay. Handles payment authorization, settlement, rate limiting, and PCI-DSS audit logging.
+
+Additional documentation: [docs/overview.md](docs/overview.md).
 
 ## Overview
 

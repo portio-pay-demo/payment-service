@@ -1,11 +1,97 @@
-target/
+# PortIOPay payment-service — based on GitHub gitignore templates:
+# Java, Maven, JetBrains, Visual Studio Code, macOS, Windows
+
+### Java (https://github.com/github/gitignore/blob/main/Java.gitignore) ###
 *.class
+*.log
+*.ctxt
+.mtj.tmp/
 *.jar
 *.war
-.mvn/
-!.mvn/wrapper/
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+replay_pid*
+
+### Maven (https://github.com/github/gitignore/blob/main/Maven.gitignore) ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+### Spring Boot / build ###
+*.original
+.springBeans
+
+### IDE — JetBrains (https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore) ###
 .idea/
 *.iml
+*.ipr
+*.iws
+out/
+
+### IDE — Eclipse ###
+.project
+.classpath
+.settings/
+bin/
+
+### IDE — Visual Studio Code (https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore) ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+!*.code-workspace
+*.vsix
+
+### IDE — Visual Studio ###
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+### OS — macOS (https://github.com/github/gitignore/blob/main/Global/macOS.gitignore) ###
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+### OS — Windows (https://github.com/github/gitignore/blob/main/Global/Windows.gitignore) ###
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+### Secrets and local configuration ###
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
 application-local.yml
 application-secrets.yml
+**/secrets/
+
+### Dependency / runtime caches (other ecosystems in monorepo tooling) ###
+node_modules/
+.venv/
+venv/
+vendor/
