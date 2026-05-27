@@ -29,4 +29,4 @@ Application defaults live in `src/main/resources/application.yml`. Use Spring pr
 ## Related documentation
 
 - [README](../README.md) — build, deploy, and API reference
-- [CODEOWNERS](../CODEOWNERS) — review ownership and approval rules
+- [CODEOWNERS](../.github/CODEOWNERS) — review ownership and approval rules

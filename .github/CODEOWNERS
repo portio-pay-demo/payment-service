@@ -1,0 +1,15 @@
+# PortIOPay payment-service CODEOWNERS
+# Requires 2 reviewers + code owner approval before merge
+
+* @payments-team
+
+# Core payment logic — requires checkout leads sign-off
+src/main/java/io/portioapay/payment/service/ @checkout-leads @payments-team
+
+# Financial calculations and reconciliation — requires finance-eng sign-off
+src/main/java/io/portioapay/payment/service/ReconciliationService.java @finance-eng @payments-team
+src/main/java/io/portioapay/payment/service/AuditLogService.java @finance-eng @payments-team
+
+# Infrastructure and deployment
+infra/ @payments-team
+.github/ @payments-team
