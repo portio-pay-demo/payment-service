@@ -1,0 +1,57 @@
+# Maven build output
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Compiled artifacts
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+hs_err_pid*.log
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Spring Boot local / secret config
+application-local.yml
+application-local.properties
+application-secrets.yml
+application-secrets.properties
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.jks
+
+# Test and coverage
+*.exec
+.jacoco/
+
+# OWASP dependency check (CI)
+.dependency-check/
+
+# Other common dependency directories
+node_modules/
+__pycache__/
